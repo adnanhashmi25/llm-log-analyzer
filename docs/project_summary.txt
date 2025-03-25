@@ -1,0 +1,36 @@
+Project Title: LLM-Powered Log Analyzer
+Project Overview:
+Modern IT systems generate vast amounts of logs, making manual analysis inefficient. This project leverages a Large Language Model (LLM) to automate log summarization, helping engineers quickly identify critical issues. By processing Linux system logs, extracting key information, and using an LLM for summarization, the tool significantly reduces troubleshooting time and enhances operational efficiency.
+Key Features & Workflow:
+1.	Log Ingestion & Preprocessing: 
+o	Reads logs from TXT, JSON, or CSV formats.
+o	Extracts timestamps, error levels, processes, and messages.
+o	Handles structured and semi-structured log formats.
+2.	Summarization via LLM: 
+o	Uses a Hugging Face Transformer model (facebook/bart-large-cnn) for summarization.
+o	Processes logs in small batches to stay within model limits.
+o	Generates concise summaries highlighting key errors and trends.
+3.	Output & Storage: 
+o	Summarized logs are saved to a CSV file.
+o	Ensures structured storage for further analysis and reporting.
+Technologies Used:
+•	Programming Language: Python
+•	Libraries: Transformers (Hugging Face), Regex, CSV, JSON
+•	Machine Learning Model: facebook/bart-large-cnn (Pre-trained summarization model)
+Challenges & Solutions:
+1.	Handling Large Log Files Efficiently: 
+o	Solution: Batched processing to avoid exceeding model token limits.
+2.	Ensuring Meaningful Summaries: 
+o	Solution: Fine-tuned preprocessing to format logs for better LLM understanding.
+3.	Avoiding System Slowdowns & Memory Issues: 
+o	Solution: Optimized log extraction and structured summarization.
+Impact & Benefits:
+•	Reduced Manual Effort – Automates log analysis, cutting down hours of manual review.
+•	Improved Troubleshooting – Quickly detects recurring errors and critical system failures.
+•	Scalability & Adaptability – Can be extended for real-time processing or integration with monitoring tools (e.g., Grafana, Kibana).
+
+Future Enhancements:
+•	Custom AI Model for Company-Specific Logs: Instead of using a general LLM, a custom model trained on internal company logs could provide higher accuracy and better anomaly detection.
+•	Real-Time Log Processing: Integration with Kafka or streaming frameworks to handle logs dynamically.
+•	Enhanced Visualization: Creating a dashboard to track system health and log trends over time.
+This project demonstrates the power of AI in log analysis, making error detection and system monitoring more efficient and scalable.
